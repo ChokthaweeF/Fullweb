@@ -1,0 +1,58 @@
+
+body{
+    background-color: black;
+}
+.navbar{
+    background-color: white;
+}
+.nav-link{
+    color: #102998;
+}
+.dropdown-menu{
+    background-color: #102998;
+    opacity: 0.75;
+}
+.dropdown-item{
+    color: white;
+}
+h1.ca{
+    color: #102998;
+}
+h2.cv{
+    color: #102998;
+}
+h4.ss{
+    font-size: 20px;
+}
+.headpic{
+    background-image: url("Pic/bgheader.jpg");
+    background-size: cover;
+}
+h3.sb{
+    color: white;
+    font-size: 60px;
+}
+h3.ss{
+    color: white;
+    font-size: 22px;
+}
+.cc{
+    background-color: #102998;
+}
+.carousel-control-prev-icon{
+    color: #102998;
+}
+h3.chc{
+    color: #102998;
+}
+.custom-indent{
+    text-indent: 20px;
+}
+.form_panel {
+    background-color: #102998;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+  }
