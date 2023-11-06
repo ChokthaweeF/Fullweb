@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="container bg-light p-2 my-2">
+    <div class="container bg-white p-2 my-2">
         <?php
         include("navbar.php");
         ?>
@@ -27,10 +27,10 @@
                 <br>
                 </div>
                 <div class="container mt-3 text-center">
-                    <button type="submit" class="bg-dark rounded-3 text-white btn">เข้าสู่ระบบ</button>
+                    <button type="submit" class="bg-dark rounded-3 text-white btn">เข้าสู่ระบบ</button><br>
+                    <br><a class="mt-2 ss container text-center" href="register.php">ยังไม่เป็นสมาชิก? สมัครสมาชิก</a>
                 </div>
                 <br>
-                <h4 class="mt-2 ss container text-center">ยังไม่เป็นสมาชิก? สมัครสมาชิก</h4>
             </form>
         <?php
         

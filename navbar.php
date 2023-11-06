@@ -34,7 +34,7 @@
                         <a class="nav-link bg-dark rounded-3 text-white" href="login.php"><i class="bi bi-person"></i>Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="signup.php">Sign Up</a>
+                        <a class="nav-link" href="register.php">Sign Up</a>
                     </li>
                 </ul>
             </div>

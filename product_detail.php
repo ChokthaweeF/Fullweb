@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="container bg-light p-2 my-2">
+    <div class="container bg-white p-2 my-2">
         <?php
         include "navbar.php";
         ?>
@@ -24,7 +24,7 @@
         ?>
 
         <h4 style="text-align: center;">รายละเอียดสินค้า</h4>
-        <hr>
+        <br>
 
         <div class="card mx-auto d-block" style="width: 70%; max-width: 500px">
             <img src="<?php echo "product_images/" . $row["p_image"]; ?>" class="card-img-top" alt="product">
@@ -32,8 +32,11 @@
             <div class="text-center card-body bg-white">
                 <h5 class="card-title"><?= $row["p_name"]; ?></h5> <br>
                 <p class="card-text">รายละเอียด : <?= $row["p_detail"]; ?></p> <br>
-                <p class="card-text">ราคา : <?= $row["p_price"]; ?></p>
-
+                <p class="card-text">ราคา : <?= $row["p_price"]; ?></p><br>
+                <a class="bg-danger rounded-3 text-white p-2" href="" ><i class="bi bi-heart-fill"></i></a><br>
+                <?php 
+                include "shop.php";
+                ?>
             </div>
         </div>
         <br>
