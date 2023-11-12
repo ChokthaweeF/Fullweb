@@ -11,8 +11,7 @@ $sql = "SELECT * FROM admindata WHERE username = '$username'
     and password = '$password'";
 
 $result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result)
-
+$row = mysqli_fetch_assoc($result) ;
 ?>
 
 <?php
@@ -23,7 +22,7 @@ if (!mysqli_num_rows($result)) {
 
   <script>
     alert("ไม่สามารถเข้าสู่ระบบได้ โปรดลองอีกครั้ง")
-    window.open("login.php", "_self")
+    window.open("signin.php", "_self")
   </script>
 
 <?php
@@ -44,6 +43,7 @@ if (!mysqli_num_rows($result)) {
 <?php
 
 }
+
 
 mysqli_close($conn);
 

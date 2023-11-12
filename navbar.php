@@ -17,7 +17,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="type.php">Type of shoes</a></li>
-                            <li><a class="dropdown-item" href="product_list_for_customer.php">Shop</a></li>
+                            <li><a class="dropdown-item" href="signin.php">Shop</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavRight">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link bg-dark rounded-3 text-white" href="login.php"><i class="bi bi-person"></i>Login</a>
+                        <a class="nav-link bg-dark rounded-3 text-white" href="signin.php"><i class="bi bi-person"></i>Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="register.php">Sign Up</a>

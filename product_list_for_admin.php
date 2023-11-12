@@ -1,12 +1,19 @@
-<?php
-session_start();
+<?php 
+
+    session_start();
+    require_once 'config/db.php';
+    if (!isset($_SESSION['admin_login'])) {
+        $_SESSION['error'] = 'กรุณาเข้าสู่ระบบ!';
+        header('location: signin.php');
+    }
+
 ?>
 <!doctype html>
 <html lang="en">
 
 <head>
     <?php
-    $page = "admin";
+    $page = "product_list_for_admin";
     include "htmlhead.php";
     ?>
 
@@ -24,21 +31,13 @@ session_start();
         ?>
 
         <?php
-        if ($_SESSION['admin_id'] == "") {
-        ?>
-            <script>
-                alert("กรุณา Login เข้าสู่ระบบ")
-                window.open("login.php", "_self")
-            </script>
-        <?php
-        } else {
             require_once "connect_db.php";
             $sql = "SELECT * FROM product";
             $result = mysqli_query($conn, $sql);
         ?>
 
             <div class="userinfo round-3">
-                <strong>ผู้ใช้งาน : </strong><?= $_SESSION["admin_name"]; ?>
+                <strong>ผู้ใช้งาน : Admin</strong>
             </div>
             <h4 style="text-align: center;">รายการสินค้า</h4>
             <hr>
@@ -76,7 +75,6 @@ session_start();
                     <?php
                         }
                         mysqli_close($conn);
-                    }
                     ?>
                     </tbody>
                 </table>

@@ -1,5 +1,12 @@
-<?php
-session_start();
+<?php 
+
+    session_start();
+    require_once 'config/db.php';
+    if (!isset($_SESSION['admin_login'])) {
+        $_SESSION['error'] = 'กรุณาเข้าสู่ระบบ!';
+        header('location: signin.php');
+    }
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -15,17 +22,6 @@ session_start();
 
         <?php
         include "navbarafter.php";
-        ?>
-
-        <?php
-        if ($_SESSION['admin_id'] == "") {
-        ?>
-            <script>
-                alert("กรุณา Login เข้าสู่ระบบ")
-                window.open("login.php", "_self")
-            </script>
-        <?php
-        }
         ?>
 
         <?php

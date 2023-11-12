@@ -1,3 +1,13 @@
+<?php 
+
+    session_start();
+    require_once 'config/db.php';
+    if (!isset($_SESSION['user_login'])) {
+        $_SESSION['error'] = 'กรุณาเข้าสู่ระบบ!';
+        header('location: signin.php');
+    }
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -18,7 +28,7 @@
 
     <div class="container bg-white p-2 my-2">
         <?php
-        include "navbar.php";
+        include "navbarafter.php";
         ?>
 
         <?php
@@ -28,7 +38,7 @@
         $result = mysqli_query($conn, $sql);
         ?>
 
-
+    
         <h4 style="text-align: center;">รายการสินค้า</h4>
         <hr>
         <div class="table-responsive px-5">

@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-if ($_SESSION['admin_id'] == "") {
+if ($_SESSION['admin_login'] == "") {
 ?>
     <script>
         alert("กรุณา Login เข้าสู่ระบบ")
-        window.open("login.php", "_self")
+        window.open("signin.php", "_self")
     </script>
 <?php
 }

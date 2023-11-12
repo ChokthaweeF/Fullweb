@@ -1,5 +1,12 @@
-<?php
-session_start();
+<?php 
+
+    session_start();
+    require_once 'config/db.php';
+    if (!isset($_SESSION['admin_login'])) {
+        $_SESSION['error'] = 'กรุณาเข้าสู่ระบบ!';
+        header('location: signin.php');
+    }
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -18,46 +25,34 @@ session_start();
         include "navbarafter.php";
         ?>
 
-        <?php
-        if ($_SESSION['admin_id'] == "") {
-        ?>
-            <script>
-                alert("กรุณา Login เข้าสู่ระบบ")
-                window.open("login.php", "_self")
-            </script>
-        <?php
-        }
-
-        ?>
-
-        <div class="form_panel rounded-3">
-            <h4 style="text-align: center;">เพิ่มรายการสินค้า</h4>
+        <div class="form_panel rounded-3 ">
+            <h4 style="text-align: center;" class="text-white">เพิ่มรายการสินค้า</h4>
             <hr>
 
 
             <form action="product_add_save.php" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
 
                 <div class="mb-2">
-                    <label for="pid" class="form-label">รหัสสินค้า :</label>
+                    <label for="pid" class="form-label text-white">รหัสสินค้า :</label>
                     <input type="text" class="form-control" id="pid" name="pid" placeholder=" จำนวน 4 หลัก" required>
                 </div>
 
                 <div class="mb-2">
-                    <label for="pname" class="form-label">ชื่อสินค้า :</label>
-                    <input type="text" class="form-control" id="pname" name="pname" required>
+                    <label for="pname" class="form-label text-white">ชื่อสินค้า :</label>
+                    <input type="text" class="form-control" id="pname" placeholder=" ชื่อสินค้า" name="pname" required>
                 </div>
 
                 <div class="mb-2">
-                    <label for="pdetail" class="form-label">รายละเอียดสินค้า :</label>
-                    <textarea class="form-control" id="pdetail" rows="3" name="pdetail" required></textarea>
+                    <label for="pdetail" class="form-label text-white">รายละเอียดสินค้า :</label>
+                    <textarea class="form-control" id="pdetail" rows="3" placeholder="รายละเอียดสินค้า" name="pdetail" required></textarea>
                 </div>
                 <div class="mb-2">
-                    <label for="pprice" class="form-label">ราคา :</label>
-                    <input type="text" class="form-control" id="pprice" name="pprice" required>
+                    <label for="pprice" class="form-label text-white">ราคา :</label>
+                    <input type="text" class="form-control" id="pprice" placeholder="ราคาสินค้า" name="pprice" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="filename" class="form-label">ภาพสินค้า</label>
+                    <label for="filename" class="form-label text-white">ภาพสินค้า</label>
                     <input class="form-control" type="file" id="filename" name="filename">
                 </div>
 

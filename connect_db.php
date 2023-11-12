@@ -6,16 +6,16 @@
 // $password = "uOUnn01b47A7leO";
 // $dbname = "epiz_29347615_nptcom";
 
-// $servername = "localhost";
-// $username = "542680";
-// $password = "anantapron2";
-// $dbname = "542680";
+$servername = "localhost";
+$username = "542680";
+$password = "anantapron2";
+$dbname = "542680";
 
 
- $servername = "localhost";
- $username = "root";
- $password = "";
- $dbname = "anantapron";
+//  $servername = "localhost";
+//  $username = "root";
+//  $password = "";
+//  $dbname = "anantapron3";
 
 
 // Create connection
